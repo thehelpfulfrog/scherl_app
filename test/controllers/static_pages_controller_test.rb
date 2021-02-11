@@ -18,4 +18,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Contact | BestCP"
   end
+
+  test "should get random" do
+    get random_path
+    assert_response :success
+    assert_select "title", "Random | BestCP"
+  end
 end

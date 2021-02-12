@@ -9,3 +9,27 @@ body {
 a {
     color:#933
 }
+
+footer {
+    bottom: 0;
+    position: fixed;
+    left: 15%;
+    width: 70%;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+  }
+  
+  footer small {
+    float: left;
+  }
+  
+  footer ul {
+    float: right;
+    list-style: none;
+  }
+  
+  footer ul li {
+    float: left;
+    margin-left: 15px;
+  }

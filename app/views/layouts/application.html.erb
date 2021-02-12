@@ -11,20 +11,10 @@
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Random SCP", random_path %></li>
-            <li><%= link_to "What's This?", about_path %></li>
-            <li><%= link_to "Contact Me", contact_path %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  <div class="container">
-    <%= yield %>
-  </div>
+    <%= render 'layouts/header' %>
+    <div class="container">
+     <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>

@@ -4,4 +4,8 @@
 <center>
     <h2>You should read:</h2>
     <h1><a href="http://www.scpwiki.com/scp-<%=num%>">SCP-<%=num%></a></h1>
+    <div class="btn-group-vertical">
+        <%= button_to "Get another suggestion", random_path, method: :get, class: "btn btn-default" %>
+        <%= button_to "Add to favorites", random_path, method: :get, class: "btn btn-default" %>
+    </div>
 </center>

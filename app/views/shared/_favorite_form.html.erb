@@ -1,0 +1,7 @@
+<%= form_with(model: @favorite, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.text_field :content, placeholder: "Enter an SCP number (ex. 173)" %>
+    </div>
+    <%= f.submit "Add", class: "btn btn-primary" %>
+  <% end %>

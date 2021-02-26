@@ -1,0 +1,11 @@
+<li id="favorite-<%= favorite.id %>">
+<% num = to_num(favorite.content) %>
+  <span class="content"><a href="http://www.scpwiki.com/scp-<%= num %>">SCP-<%= num %></a></span>
+  <span class="timestamp">
+    Added <%= time_ago_in_words(favorite.created_at) %> ago.
+    <% if current_user?(favorite.user) %>
+    <%= link_to "delete", favorite, method: :delete,
+                                     data: { confirm: "You sure?" } %>
+  <% end %>
+  </span>
+</li>

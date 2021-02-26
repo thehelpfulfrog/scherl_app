@@ -10,6 +10,8 @@ gem 'bootstrap-sass', '3.4.1'
 gem 'rexml'
 gem 'bcrypt'
 gem 'rails-controller-testing'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'

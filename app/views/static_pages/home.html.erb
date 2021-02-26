@@ -1,5 +1,30 @@
 <% provide(:title, "Home") %>
+<% if logged_in? %>
+<center>
+<div class="center jumbotron">
+  <h1>BestCP</h1>
+  <p>Welcome to your home page! From here, you can add your favorite SCPs.
+  Check your profile page to see all your favorites!</p>
+</div>
+</center>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="favorite_form">
+        <%= render 'shared/favorite_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+<div class="center jumbotron">
+<center>
 <h1>BestCP</h1>
     <p>This is a website to help you track your favorite entries on the <a href="http://scp-wiki.wikidot.com/">SCP Wiki.</a> 
-        Right now, you can click on the Random page to get a randomly generated SCP, and check the About page for info about what an SCP is.
-        Stay tuned for more content!</p>
+        You can create an account to save your favorites,
+        or log in if you already have one. Check the Random SCP page 
+        or the About page for suggestions if you're new to SCPs.</p>
+</center>
+</div>
+<% end %>

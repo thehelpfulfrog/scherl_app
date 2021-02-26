@@ -6,6 +6,8 @@
     <h1><a href="http://www.scpwiki.com/scp-<%=num%>">SCP-<%=num%></a></h1>
     <div class="btn-group-vertical">
         <%= button_to "Get another suggestion", random_path, method: :get, class: "btn btn-default" %>
-        <%= button_to "Add to favorites", random_path, method: :get, class: "btn btn-default" %>
+        <% if logged_in? %>
+        <%= button_to "Add to favorites", favorites_path("favorite" => {"content"=> num}), method: :create, class: "btn btn-default" %>
+        <% end %>
     </div>
 </center>

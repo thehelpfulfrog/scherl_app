@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :favorites, dependent: :destroy
     default_scope -> { order(:name) }
     before_save { self.email = email.downcase }
 
@@ -12,4 +13,5 @@ class User < ApplicationRecord
 
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
+
 end
